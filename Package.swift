@@ -12,12 +12,8 @@ let package = Package(
     dependencies: [
     ],
     targets: [
-		.target(name: "MoveWearableSDK", dependencies: [.target(name: "Wrapper")]),
-		.target(name: "Wrapper", path: "Wrapper/Wrapper"),
+		.target(name: "Internal", dependencies: [.target(name: "MoveWearableSDK")]),
+		.target(name: "MoveWearableSDK", path: "MoveWearableSDK/Wrapper"),
 		.binaryTarget(name: "BleSDK", path: "artifacts/BleSDK.xcframework"),
-        .testTarget(
-            name: "MoveWearableSDKTests",
-            dependencies: ["MoveWearableSDK"]
-		),
     ]
 )
