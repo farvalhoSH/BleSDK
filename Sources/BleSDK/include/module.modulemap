@@ -1,5 +1,0 @@
-module BleSDK {
-	header "BleSDK.h"
-	header "BleSDK_Header.h"
-	header "DeviceData.h"
-}
