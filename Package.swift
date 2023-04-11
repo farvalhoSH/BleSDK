@@ -4,16 +4,16 @@
 import PackageDescription
 
 let package = Package(
-    name: "MoveWearableSDK",
+	name: "MoveWearableSDK",
 	platforms: [.iOS(.v14)],
-    products: [
-        .library(name: "MoveWearableSDK", targets: ["MoveWearableSDK", "BleSDK"]),
-    ],
-    dependencies: [
-    ],
-    targets: [
+	products: [
+		.library(name: "MoveWearableSDK", targets: ["MoveWearableSDK", "BleSDK"]),
+	],
+	dependencies: [
+	],
+	targets: [
 		.target(name: "Internal", dependencies: [.target(name: "MoveWearableSDK")]),
 		.target(name: "MoveWearableSDK", path: "MoveWearableSDK/Wrapper"),
 		.binaryTarget(name: "BleSDK", path: "artifacts/BleSDK.xcframework"),
-    ]
+	]
 )
