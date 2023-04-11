@@ -3,6 +3,8 @@
 
 import PackageDescription
 
+#if !targetEnvironment(simulator)
+
 let package = Package(
     name: "MoveWearableSDK",
 	platforms: [.iOS(.v14)],
@@ -17,3 +19,5 @@ let package = Package(
 		.binaryTarget(name: "BleSDK", path: "artifacts/BleSDK.xcframework"),
     ]
 )
+
+#endif
