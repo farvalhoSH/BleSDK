@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "BleSDK_Header.h"
 #import "DeviceData.h"
+
 @interface BleSDK : NSObject
 /*!
  *  @method sharedManager:
