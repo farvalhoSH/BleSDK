@@ -3,7 +3,22 @@
 
 import PackageDescription
 
-#if !targetEnvironment(simulator)
+#if targetEnvironment(simulator)
+
+let package = Package(
+	name: "MoveWearableSDK",
+	platforms: [.iOS(.v14)],
+	products: [
+		.library(name: "MoveWearableSDK", targets: ["Simulator"]),
+	],
+	dependencies: [
+	],
+	targets: [
+		.target(name: "Simulator")
+	]
+)
+
+#else
 
 let package = Package(
     name: "MoveWearableSDK",
