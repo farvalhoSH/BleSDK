@@ -8,6 +8,9 @@
 #import <Foundation/Foundation.h>
 #import "BleSDK_Header.h"
 #import "DeviceData.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
 @interface BleSDK : NSObject
 /*!
  *  @method sharedManager:
@@ -23,14 +26,14 @@
  *  @discussion Get the time of the watch  获取手表的时间
  *
  */
--(NSMutableData*)GetDeviceTime;
+-(NSMutableData* _Nullable)GetDeviceTime;
 /*!
  *  @method SetDeviceTime:
  *  @param deviceTime   time parameter  时间参数.
  *  @discussion Set the time of the watch 设置手表的时间
  *
  */
--(NSMutableData*)SetDeviceTime:(MyDeviceTime)deviceTime;
+-(NSMutableData* _Nullable)SetDeviceTime:(MyDeviceTime)deviceTime;
 
 /*!
  *  @method GetPersonalInfo:
@@ -38,14 +41,14 @@
  *  @discussion Get the personal information of the watch  获取手表的个人信息
  *
  */
--(NSMutableData*)GetPersonalInfo;
+-(NSMutableData* _Nullable)GetPersonalInfo;
 /*!
  *  @method SetPersonalInfo:
  *  @param personalInfo   Personal basic information parameters   个人基本信息参数
  *  @discussion Set up your watch's personal information  设置手表的个人信息
  *
  */
--(NSMutableData*)SetPersonalInfo:(MyPersonalInfo)personalInfo;
+-(NSMutableData* _Nullable)SetPersonalInfo:(MyPersonalInfo)personalInfo;
 
 
 /*!
@@ -54,7 +57,7 @@
  *  @discussion Get basic information about your watch 获取手表的基本信息
  *
  */
--(NSMutableData*)GetDeviceInfo;
+-(NSMutableData* _Nullable)GetDeviceInfo;
 
 /*!
  *  @method SetDeviceInfo:
@@ -62,7 +65,7 @@
  *  @discussion Set the basic information parameters of the watch 设置手表的基本信息参数
  *
  */
--(NSMutableData*)SetDeviceInfo:(MyDeviceInfo)deviceInfo;
+-(NSMutableData* _Nullable)SetDeviceInfo:(MyDeviceInfo)deviceInfo;
 
 
 
@@ -73,7 +76,7 @@
  *  @discussion Set watch ID 设置手表ID
  *
  */
--(NSMutableData*)SetDeviceID:(NSString*)strDeviceID;
+-(NSMutableData* _Nullable)SetDeviceID:(NSString*)strDeviceID;
 
 
 /*!
@@ -82,14 +85,14 @@
  *  @discussion Get your watch's step goal 获取手表的步数目标
  *
  */
--(NSMutableData*)GetStepGoal;
+-(NSMutableData* _Nullable)GetStepGoal;
 /*!
  *  @method SetStepGoal:
  *  @param stepGoal    target value of steps 步数的目标值.
  *  @discussion Set a step goal  设置步数目标
  *
  */
--(NSMutableData*)SetStepGoal:(int)stepGoal;
+-(NSMutableData* _Nullable)SetStepGoal:(int)stepGoal;
 
 
 
@@ -99,7 +102,7 @@
  *  @discussion Scan QR Code to pair the device and enter main interface
  *
  */
--(NSMutableData*)unlockScreen;
+-(NSMutableData* _Nullable)unlockScreen;
 
 
 
@@ -109,7 +112,7 @@
  *  @discussion Enter the QR code pairing page on the normal screen
  *
  */
--(NSMutableData*)lockScreen;
+-(NSMutableData* _Nullable)lockScreen;
 
 
 
@@ -119,7 +122,7 @@
  *  @discussion Get the battery of the watch  获取手表的电量
  *
  */
--(NSMutableData*)GetDeviceBatteryLevel;
+-(NSMutableData* _Nullable)GetDeviceBatteryLevel;
 
 
 /*!
@@ -128,7 +131,7 @@
  *  @discussion Get the Mac address of the watch  获取手表的Mac地址
  *
  */
--(NSMutableData*)GetDeviceMacAddress;
+-(NSMutableData* _Nullable)GetDeviceMacAddress;
 
 
 
@@ -138,7 +141,7 @@
  *  @discussion  Get the version information of the watch 获取手表的版本信息
  *
  */
--(NSMutableData*)GetDeviceVersion;
+-(NSMutableData* _Nullable)GetDeviceVersion;
 
 
 
@@ -148,7 +151,7 @@
  *  @discussion  Factory reset (factory reset will delete all data on the device) 恢复出厂设置(恢复出厂设置会让设备的数据全部删除)
  *
  */
--(NSMutableData*)Reset;
+-(NSMutableData* _Nullable)Reset;
 
 /*!
  *  @method MCUReset
@@ -156,7 +159,7 @@
  *  @discussion MCU reset, restarting the device, will not delete the data stored in the watch    MCU复位，重启设备，不会删除手表存储的数据
  *
  */
--(NSMutableData*)MCUReset;
+-(NSMutableData* _Nullable)MCUReset;
 
 /*!
  *  @method MotorVibrationWithTimes:
@@ -164,7 +167,7 @@
  *  @discussion motor vibration 马达震动
  *
  */
--(NSMutableData*)MotorVibrationWithTimes:(int)times;
+-(NSMutableData* _Nullable)MotorVibrationWithTimes:(int)times;
 
 
 
@@ -174,7 +177,7 @@
  *  @discussion  Get the bluetooth name of the watch, this method is invalid in devices that cannot change the bluetooth name  获取手表的蓝牙名称，这个方法在不能改变蓝牙名字的设备中是无效的
  *
  */
--(NSMutableData*)GetDeviceName;
+-(NSMutableData* _Nullable)GetDeviceName;
 
 
 /*!
@@ -182,7 +185,7 @@
  *  @param strDeviceName  Bluetooth name of the device (must be ASCII character code 32 to 127, other data will be treated as spaces) 设备的蓝牙名称（必须为ASCII字符码 32 to 127，发其它数据将被当做空格处理）
  *  @discussion Set the bluetooth name of the watch, this method is invalid in devices that cannot change the bluetooth name  设置手表的蓝牙名称，这个方法在不能改变蓝牙名字的设备中是无效的
  */
--(NSMutableData*)SetDeviceName:(NSString*)strDeviceName;
+-(NSMutableData* _Nullable)SetDeviceName:(NSString*)strDeviceName;
 
 
 /*!
@@ -191,7 +194,7 @@
  *  @discussion get  the automatic monitoring information set by the watch
  *
  */
--(NSMutableData*)GetAutomaticMonitoringWithDataType:(int)dataType;
+-(NSMutableData* _Nullable)GetAutomaticMonitoringWithDataType:(int)dataType;
 
 /*!
  *  @method SetAutomaticMonitoring:
@@ -199,7 +202,7 @@
  *  @discussion Set the automatic measurement setting information of the watch 设置手表的自动测量设置信息
  *
  */
--(NSMutableData*)SetAutomaticHRMonitoring:(MyAutomaticMonitoring)automaticMonitoring;
+-(NSMutableData* _Nullable)SetAutomaticHRMonitoring:(MyAutomaticMonitoring)automaticMonitoring;
 
 
 /*!
@@ -208,7 +211,7 @@
  *  @discussion get alarm获取闹钟
  *
  */
--(NSMutableData*)GetAlarmClock;
+-(NSMutableData* _Nullable)GetAlarmClock;
 
 
 
@@ -218,7 +221,7 @@
  *  @discussion   delete all alarms 删除所有闹钟
  *
  */
--(NSMutableData*)DeleteAllAlarmClock;
+-(NSMutableData* _Nullable)DeleteAllAlarmClock;
 
 
 /*!
@@ -235,7 +238,7 @@
  *  @discussion Get sedentary reminder parameters 获取久坐提醒参数
  *
  */
--(NSMutableData*)GetSedentaryReminder;
+-(NSMutableData* _Nullable)GetSedentaryReminder;
 
 
 
@@ -245,7 +248,7 @@
  *  @discussion Set a sedentary reminder  设置久坐提醒
  *
  */
--(NSMutableData*)SetSedentaryReminder:(MySedentaryReminder)sedentaryReminder;
+-(NSMutableData* _Nullable)SetSedentaryReminder:(MySedentaryReminder)sedentaryReminder;
 
 
 
@@ -259,7 +262,7 @@
  *
  */
 
--(NSMutableData*)StartDeviceMeasurementWithType:(int)dataType  isOpen:(BOOL)isOpen isPPG_Open:(BOOL)isPPG_Open isPPI_Open:(BOOL)isPPI_Open;
+-(NSMutableData* _Nullable)StartDeviceMeasurementWithType:(int)dataType  isOpen:(BOOL)isOpen isPPG_Open:(BOOL)isPPG_Open isPPI_Open:(BOOL)isPPI_Open;
 
 
 
@@ -269,14 +272,14 @@
  *  @discussion Turn on ECG measurement 开启ECG测量
  *
  */
--(NSMutableData*)StartECGMode;
+-(NSMutableData* _Nullable)StartECGMode;
 
 /*!
  *  @method StopECGMode
  *  @discussion Turn off ECG measurement 关闭ECG测量
  *
  */
--(NSMutableData*)StopECGMode;
+-(NSMutableData* _Nullable)StopECGMode;
 
 
 /*!
@@ -285,7 +288,7 @@
  *  @discussion Get the ECG historical data of the wristband test  获取手环测试的ECG历史数据
  *
  */
--(NSMutableData*)GetECGHistoryDataWithType:(int16_t)type withStartDate:(NSDate*)startDate;
+-(NSMutableData* _Nullable)GetECGHistoryDataWithType:(int16_t)type withStartDate:(NSDate*)startDate;
 
 
 
@@ -296,7 +299,7 @@
  *  @discussion Turn on ECG measurement 开启ECG测量
  *
  */
--(NSMutableData*)ppgWithMode:(int)ppgMode  ppgStatus:(int)ppgStatus;
+-(NSMutableData* _Nullable)ppgWithMode:(int)ppgMode  ppgStatus:(int)ppgStatus;
 
 
 
@@ -307,7 +310,7 @@
  *  @discussion Watch real-time data upload  实时数据上传
  *
  */
--(NSMutableData*)RealTimeDataWithType:(int8_t)dataType;
+-(NSMutableData* _Nullable)RealTimeDataWithType:(int8_t)dataType;
 
 
 
@@ -320,7 +323,7 @@
  *  @discussion Set the current weather  设置当前的天气
  *
  */
--(NSMutableData*)setWeather:(MyWeatherParameter)weatherParameter;
+-(NSMutableData* _Nullable)setWeather:(MyWeatherParameter)weatherParameter;
 
 
 
@@ -332,7 +335,7 @@
  *  @discussion Get total exercise data    获取运动总数据
  *
  */
--(NSMutableData*)GetTotalActivityDataWithMode:(int)mode withStartDate:(NSDate*)startDate;
+-(NSMutableData* _Nullable)GetTotalActivityDataWithMode:(int)mode withStartDate:(NSDate*)startDate;
 
 
 /*!
@@ -342,7 +345,7 @@
  *  @discussion  Get detailed exercise data   获取详细运动数据
  *
  */
--(NSMutableData*)GetDetailActivityDataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
+-(NSMutableData* _Nullable)GetDetailActivityDataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
 
 
 /*!
@@ -352,7 +355,7 @@
  *  @discussion Get sleep data  获取睡眠数据
  *
  */
--(NSMutableData*)GetDetailSleepDataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
+-(NSMutableData* _Nullable)GetDetailSleepDataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
 
 
 
@@ -363,7 +366,7 @@
  *  @discussion Get continuous heart rate data  获取连续心率
  *
  */
--(NSMutableData*)GetContinuousHRDataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
+-(NSMutableData* _Nullable)GetContinuousHRDataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
 
 /*!
  *  @method GetSingleHRDataWithMode::
@@ -372,7 +375,7 @@
  *  @discussion Get single heart rate data 获取单次心率数据
  *
  */
--(NSMutableData*)GetSingleHRDataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
+-(NSMutableData* _Nullable)GetSingleHRDataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
 
 
 
@@ -383,7 +386,7 @@
  *  @discussion Get HRV monitoring data   获取HRV历史数据
  *
  */
--(NSMutableData*)GetHRVDataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
+-(NSMutableData* _Nullable)GetHRVDataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
 
 /*!
  *  @method GetActivityModeDataWithMode::
@@ -392,7 +395,7 @@
  *  @discussion Get sports type historical data  获取运动类型历史数据
  *
  */
--(NSMutableData*)GetActivityModeDataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
+-(NSMutableData* _Nullable)GetActivityModeDataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
 
 
 /*!
@@ -402,7 +405,7 @@
  *  @discussion Get automatic Spo2 historical data  获取自动Spo2历史数据
  *
  */
--(NSMutableData*)GetAutomaticSpo2DataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
+-(NSMutableData* _Nullable)GetAutomaticSpo2DataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
 
 
 
@@ -413,7 +416,7 @@
  *  @discussion Get manual Spo2 historical data  获取手动Spo2历史数据
  *
  */
--(NSMutableData*)GetManualSpo2DataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
+-(NSMutableData* _Nullable)GetManualSpo2DataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
 
 
 /*!
@@ -423,7 +426,7 @@
  *  @discussion Get temperature history data  获取体温的历史数据
  *
  */
--(NSMutableData*)GetTemperatureDataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
+-(NSMutableData* _Nullable)GetTemperatureDataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
 
 
 
@@ -434,7 +437,7 @@
  *  @discussion  Get axillary temperature history data  获取腋下测量温度的历史数据
  *
  */
--(NSMutableData*)GetAxillaryTemperatureDataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
+-(NSMutableData* _Nullable)GetAxillaryTemperatureDataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
 
 
 
@@ -443,7 +446,7 @@
  *  @discussion  Clear all historical data  清除所有历史数据
  *
  */
--(NSMutableData*)ClearAllHistoryData;
+-(NSMutableData* _Nullable)ClearAllHistoryData;
 
 
 
@@ -455,9 +458,8 @@
  *  @discussion Enter or exit multisport mode  进入或退出多运动模式
  *
  */
--(NSMutableData*)EnterActivityMode:(ACTIVITYMODE)activityMode WorkMode:(int)WorkMode BreathParameter:(MyBreathParameter)breathParameter ;
+-(NSMutableData* _Nullable)EnterActivityMode:(ACTIVITYMODE)activityMode WorkMode:(int)WorkMode BreathParameter:(MyBreathParameter)breathParameter ;
 
-#warning AppSendToDevice 需要配合EnterActivityMode 一起使用
 /*!
  *  @method AppSendToDevice:
  *  @param distance   距离
@@ -467,14 +469,14 @@
  *  @discussion When the watch enters the multi-sport mode through the APP, the APP must send a data to the watch every 1 second, otherwise the watch will exit the multi-sport mode, and these values ​​can be 0   当手表是通过APP进入多运动模式后，APP必须每隔1秒发送一个数据给手表，否则手表会退出多运动模式，这些值可以为0
  *
  */
--(NSMutableData*)AppSendToDevice:(float)distance pace_Minutes:(int)pace_Minutes pace_Seconds:(int)pace_Seconds GPS_SignalStrength:(int)GPS_SignalStrength;
+-(NSMutableData* _Nullable)AppSendToDevice:(float)distance pace_Minutes:(int)pace_Minutes pace_Seconds:(int)pace_Seconds GPS_SignalStrength:(int)GPS_SignalStrength;
 
 /*!
  *  @method EnterTakePhotoMode
  *  @discussion enter photo mode  进入拍照模式
  *
  */
--(NSMutableData*)EnterTakePhotoMode;
+-(NSMutableData* _Nullable)EnterTakePhotoMode;
 
 
 /*!
@@ -482,7 +484,7 @@
  *  @discussion back to main interface  返回主界面
  *
  */
--(NSMutableData*)BachHomeView;
+-(NSMutableData* _Nullable)BachHomeView;
 
 
 
@@ -492,7 +494,7 @@
  *  @discussion The RR interval is the interval between two heartbeats. After it is turned on, it will be returned when measuring HRV  RR间隔就是两个心跳之间的间隔。开启之后，测量HRV的时候就会回传
  *
  */
--(NSMutableData*)openRRIntervalTime:(BOOL)open;
+-(NSMutableData* _Nullable)openRRIntervalTime:(BOOL)open;
 
 
 
@@ -503,5 +505,8 @@
  *  @discussion  data analysis 数据解析
  *
  */
--(DeviceData*)DataParsingWithData:(NSData*_Nullable)bleData;
+-(DeviceData* _Nullable)DataParsingWithData:(NSData*_Nullable)bleData;
+
 @end
+
+NS_ASSUME_NONNULL_END
