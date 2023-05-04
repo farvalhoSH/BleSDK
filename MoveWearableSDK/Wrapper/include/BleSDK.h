@@ -335,7 +335,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @discussion Get total exercise data    获取运动总数据
  *
  */
--(NSMutableData* _Nullable)GetTotalActivityDataWithMode:(int)mode withStartDate:(NSDate*)startDate;
+-(NSMutableData* _Nullable)GetTotalActivityDataWithMode:(int)mode withStartDate:(NSDate* _Nullable)startDate;
 
 
 /*!
@@ -345,7 +345,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @discussion  Get detailed exercise data   获取详细运动数据
  *
  */
--(NSMutableData* _Nullable)GetDetailActivityDataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
+-(NSMutableData* _Nullable)GetDetailActivityDataWithMode:(int)mode  withStartDate:(NSDate* _Nullable)startDate;
 
 
 /*!
@@ -355,7 +355,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @discussion Get sleep data  获取睡眠数据
  *
  */
--(NSMutableData* _Nullable)GetDetailSleepDataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
+-(NSMutableData* _Nullable)GetDetailSleepDataWithMode:(int)mode  withStartDate:(NSDate* _Nullable)startDate;
 
 
 
@@ -366,7 +366,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @discussion Get continuous heart rate data  获取连续心率
  *
  */
--(NSMutableData* _Nullable)GetContinuousHRDataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
+-(NSMutableData* _Nullable)GetContinuousHRDataWithMode:(int)mode  withStartDate:(NSDate* _Nullable)startDate;
 
 /*!
  *  @method GetSingleHRDataWithMode::
@@ -375,7 +375,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @discussion Get single heart rate data 获取单次心率数据
  *
  */
--(NSMutableData* _Nullable)GetSingleHRDataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
+-(NSMutableData* _Nullable)GetSingleHRDataWithMode:(int)mode  withStartDate:(NSDate* _Nullable)startDate;
 
 
 
@@ -386,7 +386,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @discussion Get HRV monitoring data   获取HRV历史数据
  *
  */
--(NSMutableData* _Nullable)GetHRVDataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
+-(NSMutableData* _Nullable)GetHRVDataWithMode:(int)mode  withStartDate:(NSDate* _Nullable)startDate;
 
 /*!
  *  @method GetActivityModeDataWithMode::
@@ -395,7 +395,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @discussion Get sports type historical data  获取运动类型历史数据
  *
  */
--(NSMutableData* _Nullable)GetActivityModeDataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
+-(NSMutableData* _Nullable)GetActivityModeDataWithMode:(int)mode  withStartDate:(NSDate* _Nullable)startDate;
 
 
 /*!
@@ -405,7 +405,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @discussion Get automatic Spo2 historical data  获取自动Spo2历史数据
  *
  */
--(NSMutableData* _Nullable)GetAutomaticSpo2DataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
+-(NSMutableData* _Nullable)GetAutomaticSpo2DataWithMode:(int)mode  withStartDate:(NSDate* _Nullable)startDate;
 
 
 
@@ -416,7 +416,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @discussion Get manual Spo2 historical data  获取手动Spo2历史数据
  *
  */
--(NSMutableData* _Nullable)GetManualSpo2DataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
+-(NSMutableData* _Nullable)GetManualSpo2DataWithMode:(int)mode  withStartDate:(NSDate* _Nullable)startDate;
 
 
 /*!
@@ -426,7 +426,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @discussion Get temperature history data  获取体温的历史数据
  *
  */
--(NSMutableData* _Nullable)GetTemperatureDataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
+-(NSMutableData* _Nullable)GetTemperatureDataWithMode:(int)mode  withStartDate:(NSDate* _Nullable)startDate;
 
 
 
@@ -437,7 +437,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @discussion  Get axillary temperature history data  获取腋下测量温度的历史数据
  *
  */
--(NSMutableData* _Nullable)GetAxillaryTemperatureDataWithMode:(int)mode  withStartDate:(NSDate*)startDate;
+-(NSMutableData* _Nullable)GetAxillaryTemperatureDataWithMode:(int)mode  withStartDate:(NSDate* _Nullable)startDate;
 
 
 
