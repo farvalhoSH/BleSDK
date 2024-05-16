@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
 	name: "MoveWearableSDK",
-	platforms: [.iOS(.v14)],
+	platforms: [.iOS(.v15)],
 	products: [
 		.library(name: "MoveWearableSDK", targets: ["MoveWearableSDK", "BleSDK"]),
 	],
